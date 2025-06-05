@@ -65,6 +65,7 @@ namespace CuteDuckGame
                             ChangeMapPosition();
                             Debug.Log("맵 위치 변경");
                         }
+                        StaticData.SetSpawnPos(currentSelectedPosition);
                     }
 
                     if (touch.phase == TouchPhase.Ended)
@@ -128,8 +129,7 @@ namespace CuteDuckGame
 
                 Vector3 newPosition = hits[0].pose.position;
                 currentSelectedPosition = newPosition;
-                StaticData.SetSpawnPos(currentSelectedPosition);
-                OnARPositionChanged?.Invoke(currentSelectedPosition);
+                //OnARPositionChanged?.Invoke(currentSelectedPosition);
 
             }
             else

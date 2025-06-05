@@ -63,7 +63,7 @@ namespace CuteDuckGame
         private void SubscribeToEvents()
         {
             // AR 이벤트 구독
-            RaycastWithTrackableTypes.OnARPositionValidityChanged += OnARValidityChanged;
+           // RaycastWithTrackableTypes.OnARPositionValidityChanged += OnARValidityChanged;
             
             // UI 이벤트 구독
             UIManager.OnGameStartRequested += OnGameStartRequested;
@@ -178,7 +178,7 @@ namespace CuteDuckGame
         private void OnDestroy()
         {
             // 이벤트 구독 해제
-            RaycastWithTrackableTypes.OnARPositionValidityChanged -= OnARValidityChanged;
+            //RaycastWithTrackableTypes.OnARPositionValidityChanged -= OnARValidityChanged;
             UIManager.OnGameStartRequested -= OnGameStartRequested;
             UIManager.OnGameLeaveRequested -= OnGameLeaveRequested;
         }
